@@ -9,10 +9,8 @@ from PyQt5.QtCore import pyqtSignal, QObject
 from api_client import fetch_article
 from mifare_writer import MifareWriter
 
-
 class ArticleSignals(QObject):
     article_added = pyqtSignal(str)
-
 
 class MainWindow(QMainWindow):
     def __init__(self):
@@ -311,7 +309,6 @@ class MainWindow(QMainWindow):
             except:
                 pass
         event.accept()
-
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
